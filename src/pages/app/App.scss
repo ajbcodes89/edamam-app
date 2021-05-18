@@ -24,15 +24,35 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App{
+  text-align: center;
+  min-height: 100vh;
+  background-image: url("https://www.transparenttextures.com/patterns/grey-washed-wall.png");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-form{
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.search-bar{
+  width: 50%;
+  border: none;
+  padding: 10px;
+  background: #f7f9fb;
+}
+
+.search-button{
+  background: #31708e;
+  border: none;
+  padding: 10px 20px;
+  color: #f7f9fb;
+}
+
+.recipes{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
