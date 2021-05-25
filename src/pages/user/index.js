@@ -1,9 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from 'reactstrap';
 
+import "./user.scss";
 import UserProfile from "../../components/userProfile";
 import UserFavorites from "../../components/userFavorites";
-import "./user.scss";
+
 
 const styles = {
  userSpace: {
