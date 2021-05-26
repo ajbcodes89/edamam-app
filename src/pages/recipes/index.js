@@ -3,7 +3,6 @@ import "./recipes.scss";
 import ResultsCard from "../../components/card";
 
 
-
 function Recipes() {
   const APP_ID = "943870ca";
   const APP_KEY = "1ea928e38226f6d40c8f3af4f45995c0";
