@@ -7,7 +7,9 @@ function UserProfile() {
   
     <div>
       <div className="user-img" >
-        <img src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
+
+        <img src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt="img"
+
         />
       </div>
       <div className="user-name" > 
