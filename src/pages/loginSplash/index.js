@@ -1,3 +1,4 @@
+
 import React, {useState, useEffect} from "react";
 import "./splash.scss";
 import Auth from '../../components/auth/auth';
@@ -22,6 +23,7 @@ const updateToken = (newToken) => {
   <div className="Results">
     <Auth updateToken={updateToken}/>
     
+
   </div>
   );
 }
