@@ -7,22 +7,17 @@ import "./userProfile.scss";
 function UserProfile() {
   return (
   
-    <Container>
-      <Row  xs="2">
-        <Col sm={{ size: 6, order: 2, offset: 1 }}>
+    <div>
+      <div className="user-img" >
 
-          <Card style={{borderRadius: 50 }}>
-        <img style={{borderTopRightRadius: 50, borderTopLeftRadius: 50 }} className="user-img" src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt="User Avatar" />
-         <CardBody>
-          <CardText>Beezle Bryan</CardText>
-          </CardBody>
-        </Card>
-        
-      </Col>
-      </Row>
-      
-      
-    </Container>
+        <img src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt="img"
+
+        />
+      </div>
+      <div className="user-name" > 
+        <h4>Beezle Bryan</h4>
+      </div>
+    </div>
  
   );
 }

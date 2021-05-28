@@ -1,14 +1,29 @@
-import React from "react";
-import  "./splash.scss";
 
+import React, {useState, useEffect} from "react";
+import "./splash.scss";
+import Auth from '../../components/auth/auth';
 
+function Splash () {
 
+const [sessionToken, setSessionToken] = useState('');
 
-function Splash() {
+useEffect(() =>{
+  if(localStorage.getItem('token')) {
+    setSessionToken(localStorage.getItem('token'));
+
+  }
+}, [])
+
+const updateToken = (newToken) => {
+ localStorage.setItem('token', newToken);
+ setSessionToken(newToken);
+ console.log(sessionToken);
+}
   return (
   <div className="Results">
-    <h1>Splash Page</h1>
-    <Auth />
+    <Auth updateToken={updateToken}/>
+    
+
   </div>
   );
 }
