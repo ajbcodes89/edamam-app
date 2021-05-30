@@ -1,4 +1,6 @@
 import React from "react";
+import {  Container, Row, Col, Card, CardText, CardBody, } from 'reactstrap';
+
 import "./userProfile.scss";
 
 

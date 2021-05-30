@@ -11,7 +11,7 @@ const Signup = (props) => {
        // console.log(username, password);
        fetch("http://localhost:9000/user/register", {
        method: 'POST',
-       body: JSON.stringify({userName: username, password: password}),
+       body: JSON.stringify( {userName: username, password: password}),
        headers: new Headers({
            'Content-Type': 'application/json'
        })

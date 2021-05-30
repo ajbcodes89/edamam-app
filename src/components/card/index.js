@@ -10,7 +10,7 @@ import {
   CardBody,
 } from "reactstrap";
 
-const ResultsCard = ({ title, calories, image, ingredients }) => {
+const ResultsCard = ({ title, calories, image, ingredients, addFavorite }) => {
   return (
     <CardGroup>
       <Card>
@@ -28,7 +28,7 @@ const ResultsCard = ({ title, calories, image, ingredients }) => {
               ))}
             </ol>
           </CardText>
-          <Button color="primary">Button</Button>
+          <Button color="primary"className="addButton" onClick={e => addFavorite(`${image}`, `${image}`, `${title}`)}>Add Recipe</Button>
         </CardBody>
       </Card>
     </CardGroup>
