@@ -34,6 +34,24 @@ function Recipes() {
     setSearch("");
   };
 
+  const addRecipe = (recipeId, imageURL, title) => {
+    console.log({ recipeId, imageURL, title })
+    fetch("http://localhost:9000/favorites/add" , {
+        method: "POST",
+        body: JSON.stringify( {
+          recipeId: recipeId,
+          imageURL: imageURL,
+          title: title,}),
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        })
+        
+    })
+        .then(res => console.log(res.json()))
+}
+
+
+
   return (
     <div className="Recipes">
    <form onSubmit={getSearch} className="search-form">
@@ -56,6 +74,7 @@ function Recipes() {
         calories={recipe.recipe.calories}
         image={recipe.recipe.image}
         ingredients={recipe.recipe.ingredients}
+        addFavorite={addRecipe}
         />
         ))}
     </div>

@@ -1,8 +1,10 @@
-import React from "react";
-import "./userFavorites.scss";
+import React, {useState, useEffect } from "react";
+// import "./userFavorites.scss";
 import {
+    Container, Col, Row,
     Card,
     CardTitle,
+    CardImg,
     CardText,
     CardGroup,
     CardSubtitle,
@@ -20,13 +22,35 @@ import {
 
 
 function UserFavorites() {
+  const [favorites, setFavorites] = useState([])
+  
+  
+  
+  useEffect(() => {
+    fetch("http://localhost:9000/favorites/mine" , {
+      method: 'GET',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token'),
+      })
+    })
+      .then(res => (res.json()))
+      .then( json => {
+        setFavorites(json.mine)
+        console.log(json.mine)
+      })
+  }, [])
+
+  
   return (
       
           <CardGroup>
+            
               <h4>My Favorite Recipes</h4>
             <Card style={ styles.favSpacing }> 
              <CardBody body inverse color="primary">
-                <CardTitle tag="h5"></CardTitle>
+             <CardImg top width="100%" src={favorites.imageURL} alt="Card image cap" />
+                <CardTitle tag="h5">{favorites.title}</CardTitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Comments why this is Favorite
                 </CardSubtitle>
                 <CardText>
