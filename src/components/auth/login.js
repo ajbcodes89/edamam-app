@@ -18,7 +18,9 @@ const Login = (props) => {
     }) .then(
         (response) => response.json()
     ).then((data) => {
-        props.updateToken(data.sessionToken);
+        props.updateToken(data.token);
+        localStorage.setItem('token',data.token);
+        console.log(data);
     })
   }
   
