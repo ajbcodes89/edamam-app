@@ -38,8 +38,7 @@ function Recipes() {
   };
   
   
-  
-  
+
   const addRecipe = (recipeId, imageURL, title) => {
     console.log({ recipeId, imageURL, title })
     fetch("http://localhost:9000/favorites/add" , {
@@ -47,7 +46,8 @@ function Recipes() {
         body: JSON.stringify( {
           recipeId: recipeId,
           imageURL: imageURL,
-          title: title,}),
+          title: title
+        }),
         headers: new Headers({
             'Content-Type': 'application/json'
         })      
@@ -55,9 +55,9 @@ function Recipes() {
       .then(res => console.log(res.json()))
       .then( json => console.log(json))
       .catch ( err => console.log(err.message))
-      
-        
-}
+  }
+
+
 
 
   return (
