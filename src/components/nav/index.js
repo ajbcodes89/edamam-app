@@ -1,28 +1,71 @@
-import React from "react";
+import { useState } from "react";
 import "./nav.scss";
 import {Link} from "react-router-dom";
+//import {  Navbar, Collapse, NavbarToggler, NavItem,NavbarBrand} from 'reactstrap';
 
-function Nav() {
-  const navStyle = {
+
+
+  const Nav = (props) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => {
+      let newIsOpen = !isOpen;
+      setIsOpen(newIsOpen); 
+      const navStyle = {
     color: 'white'
   };
+    } 
 
-  return (
-  <nav>
-    <h3>Logo</h3>
+
+  return ( 
+ 
+ /*<Navbar color="faded" light expand="sm">
+   <NavbarBrand>
+     <Link to="/">Login</Link>
+   </NavbarBrand>
+   <NavbarToggler onClick={toggle}/>
+   <Collapse isOpen={isOpen} navbar>
+     <Nav className="click" navbar>
+         
+       <NavItem> 
+         <Link to="/recipes">Search</Link>
+         </NavItem>
+         
+       <NavItem> 
+         <Link to="/users">users</Link>
+         </NavItem>
+         
+       <NavItem> 
+         <Link onClick={props.clickLogout}>Logout</Link>
+         </NavItem>
+       </Nav>
+   </Collapse>
+ </Navbar>
+  );
+  }*/  
+  
+   <nav>
+    <div className="let">
+    <h5>LetsEat.com</h5>
+    </div>
     <ul className="nav-links" >
-      <Link style={navStyle} to="/">
+      <Link to="/recipes">
       <li>Home</li>
       </Link>
-      <Link style={navStyle} to="/splash">
-      <li>Login</li>
+      <Link to="/">
+      <li>Login/Signup</li>
       </Link>
-      <Link style={navStyle} to="/users">
+      <Link to="/users">
       <li>User</li>      
       </Link>
-    </ul>
+      </ul>
   </nav>
+  
+
+  
+  
   );
-}
+} 
+
+
 
 export default Nav;

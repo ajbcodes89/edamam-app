@@ -1,22 +1,35 @@
-import React from 'react';
-import {Container, Row, Col} from 'reactstrap';
+import Signup from "../../components/auth/signup";
+import Login from "../../components/auth/login";
+import {Tab,Tabs} from  'react-bootstrap';
 
-import Signup from './signup';
-import Login from './login';
+import "./auth.css";
 
-const Auth = (props) => { 
-    return(
-    <Container className="auth-container">
-        <Row>
-            <Col md="6">
-                <Signup updateToken={props.updateToken}/>
-            </Col>
-            <Col md="6">
-                <Login updateToken={props.updateToken} />
-            </Col>
-        </Row>
-    </Container>
-    )
+
+const Auth = () => {
+
+
+    return ( 
+    
+    <div className="eat">
+   
+        
+
+    <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+<Tab eventKey="Signup" title="Signup">
+<Signup />
+</Tab>
+ <Tab eventKey="Login" title="Login">
+<Login />
+ </Tab>
+  
+ </Tabs>
+   
+  
+   
+   
+   </div>
+   
+   )
 }
 
 export default Auth;

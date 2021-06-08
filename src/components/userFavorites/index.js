@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from "react";
-// import "./userFavorites.scss";
+//import "./userFavorites.scss";
 import {
     Container, Col, Row,
     Card,
@@ -20,7 +20,7 @@ import {
      }
    };
 
-
+   //const UserFavorites = () => {
 function UserFavorites() {
   const [favorites, setFavorites] = useState([])
   
