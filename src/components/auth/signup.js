@@ -1,5 +1,3 @@
-//import React, { Component } from "react";
-//import {Container, Row, Col} from 'reactstrap';
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
 
@@ -7,11 +5,6 @@ import {Link} from 'react-router-dom';
 import "./signup.css";
 
 
-
-
-//import Signup from './signup';
-
-//signup page
 const Auth = (props) => {
 
     const [username, setUsername] = useState('');
@@ -81,18 +74,5 @@ const Auth = (props) => {
 
 
 
-    //{/* /* return( */}
-    //{/* <Container className="auth-container"> */}
-      //  {/* <Row> */}
-        //    {/* <Col md="6"> */}
-          //      {/* <Signup updateToken={props.updateToken}/> */}
-           // {/* </Col> */}
-            //{/* <Col md="6"> */}
-              //  {/* <Login updateToken={props.updateToken} /> */}
-           // {/* </Col> */}
-       // {/* </Row> */}
-   // {/* </Container> */}
-   // {/* ) */}/
-//{/*/ */}
-
+    
 export default Auth;

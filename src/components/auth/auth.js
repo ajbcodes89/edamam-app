@@ -1,3 +1,4 @@
+
 import Signup from "../../components/auth/signup";
 import Login from "../../components/auth/login";
 import {Tab,Tabs} from  'react-bootstrap';
@@ -33,3 +34,4 @@ const Auth = (props) => {
 }
 
 export default Auth;
+
