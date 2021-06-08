@@ -5,7 +5,7 @@ import {Tab,Tabs} from  'react-bootstrap';
 import "./auth.css";
 
 
-const Auth = () => {
+const Auth = (props) => {
 
 
     return ( 
@@ -16,10 +16,10 @@ const Auth = () => {
 
     <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
 <Tab eventKey="Signup" title="Signup">
-<Signup />
+<Signup updateToken={props.updateToken} />
 </Tab>
  <Tab eventKey="Login" title="Login">
-<Login />
+<Login updateToken={props.updateToken}/>
  </Tab>
   
  </Tabs>

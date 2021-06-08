@@ -94,10 +94,10 @@ input::placeholder {
     letter-spacing: 1px;
     margin-bottom: 0.25em;
     align-items: center;
-
+    
 }
 
-.signup button:hover {
+.login button:hover {
     color: #519e8a;
     background-color: rgb(10, 10, 10);
     border: 2px solid #519e8a;

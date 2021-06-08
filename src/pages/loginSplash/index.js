@@ -31,7 +31,7 @@ const updateToken = (newToken) => {
      {/* <Nav clickLogout={clearToken}/>  */}
     
 
-<img src={Eat} alt="eat" width="500" />
+
     
   </div>
   );
