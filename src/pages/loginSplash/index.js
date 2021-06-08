@@ -1,7 +1,11 @@
-
-import React, {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import "./splash.scss";
 import Auth from '../../components/auth/auth';
+
+//import Signup from "../../components/auth/signup";
+import Eat from "../../assets/clip.png";
+
+
 
 function Splash () {
 
@@ -19,11 +23,16 @@ const updateToken = (newToken) => {
  setSessionToken(newToken);
  console.log(sessionToken);
 }
+
   return (
   <div className="Results">
-    <Auth updateToken={updateToken}/>
+   
+<Auth updateToken={updateToken}/>
+     {/* <Nav clickLogout={clearToken}/>  */}
     
 
+
+    
   </div>
   );
 }

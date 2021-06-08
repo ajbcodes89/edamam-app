@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, {useState, useEffect } from "react";
+//import "./userFavorites.scss";
 import {
   Card,
   CardTitle,
@@ -19,6 +19,26 @@ const styles = {
   },
 };
 
+   //const UserFavorites = () => {
+function UserFavorites() {
+  const [favorites, setFavorites] = useState([])
+  
+  
+  
+  useEffect(() => {
+    fetch("http://localhost:9000/favorites/mine" , {
+      method: 'GET',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token'),
+      })
+    })
+      .then(res => (res.json()))
+      .then( json => {
+        setFavorites(json.mine)
+        console.log(json.mine)
+      })
+  }, [])
 const UserFavoriteCard = (props) => {
   const { info } = props;
 
