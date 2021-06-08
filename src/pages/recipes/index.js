@@ -10,6 +10,8 @@ function Recipes() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
+  
+ 
 
   useEffect(() => {
     getRecipes();
@@ -22,6 +24,7 @@ function Recipes() {
     const data = await response.json();
     console.log(data);
     setRecipes(data.hits);
+    
   };
 
   const updateSearch = (e) => {
@@ -33,7 +36,10 @@ function Recipes() {
     setQuery(search);
     setSearch("");
   };
-
+  
+  
+  
+  
   const addRecipe = (recipeId, imageURL, title) => {
     console.log({ recipeId, imageURL, title })
     fetch("http://localhost:9000/favorites/add" , {
@@ -44,12 +50,14 @@ function Recipes() {
           title: title,}),
         headers: new Headers({
             'Content-Type': 'application/json'
-        })
-        
+        })      
     })
-        .then(res => console.log(res.json()))
+      .then(res => console.log(res.json()))
+      .then( json => console.log(json))
+      .catch ( err => console.log(err.message))
+      
+        
 }
-
 
 
   return (
@@ -70,6 +78,7 @@ function Recipes() {
       {recipes.map((recipe) => (
         <ResultsCard
         key={recipe.recipe.label}
+        recipeID={recipe.recipe.uri}
         title={recipe.recipe.label}
         calories={recipe.recipe.calories}
         image={recipe.recipe.image}
