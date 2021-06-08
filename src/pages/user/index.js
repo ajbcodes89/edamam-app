@@ -75,6 +75,39 @@ function User() {
 
     console.log("PLEASE LOOK HERE", favorites);
 
+
+  // //! UPDATE NOTE IN FAVORITES
+
+  //   const updateFavorite = (note) => {
+  //     fetch("http://localhost:9000/favorites/update/:id", {
+  //       method: 'POST',
+  //       body: JSON.stringify({
+  //         note: note
+  //       }),
+  //       headers: new Headers({
+  //         'Content-Type': 'application/json'
+  //       })
+  //     })
+  //       .then(res => console.log(res.json))
+  //       .then(json => console.log(json))
+  //       .catch(err => console.log(err.message))
+  //   }
+
+  //   //! DELETE A FAVORITE
+
+  //   const deleteFavorite = () => {
+  //     fetch("http://localhost:9000/favorites/delete/:id", {
+  //       method: 'DESTROY',
+  //       body: JSON.stringify({}),
+  //       headers: new Headers({
+  //         'Content-Type': 'application/json'
+  //       })
+  //     })
+  //       .then(res => console.log(res.json))
+  //       .then(json => console.log(json))
+  //       .catch(err => console.log(err.message))
+  //   }
+
     //! take database array and call 1 item (0) use the restrict variable and change with +1 or -1
     // take recipe id and use the single item fetch to get that json data
     // take that data and export into our card
@@ -104,15 +137,15 @@ function User() {
         </Col>
       </Row>
       <Row xs="2">
-        {/* <Col>{favorites?.map((favorite, index) => {
-        if (restrict < 1 ) {
-        console.log(favorite);
-        getFavorites(favorite.recipeId);
-        console.log(cardInfo);
-        return <UserFavoriteCard key={index} info={cardInfo} />;
-      }
-      return null
-      })}</Col> */}
+        <Col>{favorites?.map((favorite, index) => {
+            if (restrict < 1 ) {
+              console.log(favorite);
+              getFavorites(favorite.recipeId);
+              console.log(cardInfo);
+              return <UserFavoriteCard key={index} info={cardInfo} />;
+            }
+            return null
+        })}</Col>
         <Col>{displayFavorites()}</Col>
       </Row>
     </Container>

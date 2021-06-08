@@ -4,7 +4,7 @@ import {  Container, Row, Col, Card, CardText, CardBody, } from 'reactstrap';
 import "./userProfile.scss";
 
 
-function UserProfile() {
+function UserProfile(props) {
   return (
   
     <div>
@@ -15,7 +15,7 @@ function UserProfile() {
         />
       </div>
       <div className="user-name" > 
-        <h4>Beezle Bryan</h4>
+        {/* <h4>{props.userName}</h4> */}
       </div>
     </div>
  

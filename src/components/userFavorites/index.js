@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 
 import {
   Card,
@@ -8,6 +9,7 @@ import {
   CardGroup,
   CardSubtitle,
   CardBody,
+  Button
 } from "reactstrap";
 
 const styles = {
@@ -21,8 +23,23 @@ const styles = {
 
 const UserFavoriteCard = (props) => {
   const { info } = props;
-
   // console.log(info);
+
+  //!DELETE // UPDATE NOTE
+  // const [status, deleteFavorite] = useState("");
+  // const [enteredNote, updateNote] = useState("");
+
+  // console.log('delete button evaluated');
+
+  // const deleteHandler = (event) => {
+  //   event.preventDefault();
+  //   deleteFavorite();
+  //   console.log(info)
+  // }
+
+  // const updateNote = () => {
+    
+  // }
 
   return (
     <CardGroup>
@@ -35,6 +52,8 @@ const UserFavoriteCard = (props) => {
             {info.calories}
           </CardSubtitle>
           <CardText></CardText>
+          {/* <Button onClick={noteHandler}>Add Note</Button>
+          <Button onClick={deleteHandler}>Delete</Button> */}
         </CardBody>
       </Card>
     </CardGroup>

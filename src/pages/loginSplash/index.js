@@ -1,7 +1,7 @@
 
 import React, {useState, useEffect} from "react";
 import "./splash.scss";
-import Auth from '../../components/auth/auth';
+import Auth from '../../components/auth/Auth';
 
 function Splash () {
 
